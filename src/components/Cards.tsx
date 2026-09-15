@@ -19,7 +19,7 @@ const CARDS: {
   {
     icon: Sparkles,
     title: "Bordado Premium",
-    body: "Personajes 'Semilla' bordados en formato pequeño (8-10cm). Divertido, sofisticado. Sin exagerar.",
+    body: "Personaje 'Semilla' bordado en formato pequeño (8-10cm). Divertido, sofisticado. Sin exagerar.",
   },
   {
     icon: Layers,
@@ -28,8 +28,8 @@ const CARDS: {
   },
   {
     icon: Maximize2,
-    title: "Boxy Fit",
-    body: "Corte relajado y contemporáneo. Olvida las siluetas ajustadas de siempre.",
+    title: "Oversized con horma",
+    body: "Amplio de cuerpo, con el hombro en su sitio y buena caída. Holgura medida, no una silueta sin forma.",
   },
 ];
 

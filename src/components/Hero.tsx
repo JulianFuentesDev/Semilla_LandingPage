@@ -14,6 +14,7 @@ import {
   springHover,
   viewportOnce,
 } from "@/lib/motion";
+import { formatPriceCOP } from "@/lib/product";
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 const HEADLINE = ["Semilla"];
@@ -86,6 +87,18 @@ export function Hero() {
               Ver especificaciones ↓
             </motion.a>
           </motion.div>
+
+          <motion.p
+            variants={heroCtas}
+            initial="hidden"
+            animate="visible"
+            className="mt-5 text-sm text-neutral-400"
+          >
+            <span className="font-mono text-base text-[#f5f0e8]">
+              {formatPriceCOP()}
+            </span>{" "}
+            · Envío gratis en Bogotá
+          </motion.p>
         </div>
 
         <motion.div

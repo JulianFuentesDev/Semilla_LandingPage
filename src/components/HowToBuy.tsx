@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 import { viewportOnce } from "@/lib/motion";
+import { formatPriceCOP } from "@/lib/product";
 
 const steps: {
   number: string;
@@ -99,13 +100,20 @@ export function HowToBuy() {
         ))}
       </div>
 
+      <div className="mt-8 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 text-sm text-neutral-400">
+        <span className="font-mono text-lg text-[#f5f0e8]">
+          {formatPriceCOP()}
+        </span>
+        <span>· Contra entrega en Bogotá · Envío gratis</span>
+      </div>
+
       <motion.a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.03 }}
         transition={{ type: "spring", stiffness: 300 }}
-        className="mt-8 block w-full rounded-full bg-[#f5f0e8] text-black font-medium py-4 text-center"
+        className="mt-4 block w-full rounded-full bg-[#f5f0e8] text-black font-medium py-4 text-center"
       >
         Comprar ahora →
       </motion.a>

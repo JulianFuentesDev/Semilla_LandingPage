@@ -8,6 +8,7 @@ import {
   springHover,
   viewportOnce,
 } from "@/lib/motion";
+import { formatPriceCOP } from "@/lib/product";
 import { WHATSAPP_URL } from "@/lib/whatsapp";
 
 export function CTA() {
@@ -32,6 +33,9 @@ export function CTA() {
         </h2>
         <p className="mt-4 text-lg text-neutral-400">
           Una vez se acaben, se acaban.
+        </p>
+        <p className="mt-6 font-mono text-3xl text-[#f5f0e8]">
+          {formatPriceCOP()}
         </p>
         <motion.a
           href={WHATSAPP_URL}

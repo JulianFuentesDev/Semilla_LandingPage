@@ -63,6 +63,43 @@ export const heroCtas: Variants = {
 
 export const viewportOnce = { once: true } as const;
 
+/** Medio visible antes de disparar: en móvil el scroll basta para activarlo. */
+export const viewportHalf = { once: true, amount: 0.5 } as const;
+
+/**
+ * Card de personaje sin revelar.
+ *
+ * El estado `hovered` se activa por etiqueta desde la propia card, de modo que
+ * Framer Motion lo propaga a sus hijos con variantes — así el badge reacciona
+ * al cursor sobre toda la card y no solo sobre sí mismo. El gesto de hover de
+ * Framer Motion ignora los eventos táctiles, de manera que en móvil nunca se
+ * dispara sin necesidad de detectar el dispositivo.
+ */
+export const comingSoonCard: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easeOut },
+  },
+  hovered: { scale: 1.02, y: -4, transition: { type: "spring", stiffness: 250 } },
+};
+
+/**
+ * Badge "PRÓXIMAMENTE" sobre la imagen velada. Al entrar solo anima opacidad
+ * y `y`, así que con `reducedMotion="user"` Framer Motion descarta el
+ * desplazamiento y el badge simplemente aparece.
+ */
+export const comingSoonBadge: Variants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, delay: 0.2, ease: easeOut },
+  },
+  hovered: { scale: 1.04, transition: { type: "spring", stiffness: 250 } },
+};
+
 export const floatTransition: Transition = {
   duration: 3,
   repeat: Infinity,
