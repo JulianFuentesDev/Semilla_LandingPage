@@ -17,8 +17,8 @@ mensaje de WhatsApp, en este orden:
 | Sección | Componente | Qué hace |
 | --- | --- | --- |
 | Hero | `Hero.tsx` | Nombre de la marca, propuesta de valor y el mockup del producto |
-| Especificaciones | `Cards.tsx` | Tres cartas: bordado premium, gramaje 220-260 g/m², corte boxy |
-| Personajes | `MeetTheDrop.tsx` | Presenta a Semilla Spidi y Semilla Ing, los dos bordados del Drop 01 |
+| Especificaciones | `Cards.tsx` | Tres cartas: bordado premium, gramaje 220-260 g/m², oversized con horma |
+| Personaje | `MeetTheDrop.tsx` | Presenta a Semilla Spidi, el único bordado del Drop 01, y adelanta a Semilla Ing como próximo |
 | Guía de tallas | `SizeGuide.tsx` | Tabla de medidas en centímetros de la S a la XL |
 | Stock | `StockCounter.tsx` | Contador de unidades disponibles sobre el total de 40 |
 | Cómo comprar | `HowToBuy.tsx` | Los tres pasos: elegir talla, escribir por WhatsApp, recibir en Bogotá |
